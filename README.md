@@ -35,9 +35,10 @@ A modern web-based reverse proxy application built with FastAPI (Python) and Rea
 
 ### Installation
 
-1. **Clone or navigate to the project directory:**
+1. **Clone the project:**
 ```bash
-cd /Users/davidebert/Desktop/Documents/ReverseProxyUmbrel
+git clone https://github.com/dcbert/NebulaProxy.git
+cd NebulaProxy
 ```
 
 2. **Build and run with Docker Compose:**
