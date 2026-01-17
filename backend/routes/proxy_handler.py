@@ -72,7 +72,8 @@ async def proxy_request(proxy_id: str, path: str, request: Request):
                 )
 
             # For other content types, pass through as-is with standard header modifications
-            response_headers = modify_response_headers(dict(response.headers))
+            # Always remove encoding headers because httpx automatically decodes the content
+            response_headers = modify_response_headers(dict(response.headers), remove_encoding=True)
 
             # For other content types, return as-is
             return Response(
