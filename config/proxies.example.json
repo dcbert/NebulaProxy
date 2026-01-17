@@ -1,0 +1,9 @@
+[
+  {
+    "id": "example",
+    "name": "Example App",
+    "target_url": "http://192.168.1.100:8080",
+    "enabled": true,
+    "description": "An example proxied application"
+  }
+]

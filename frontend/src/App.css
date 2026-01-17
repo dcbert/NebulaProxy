@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger-color: #dc2626;
+  --danger-hover: #b91c1c;
+  --bg-dark: #0f172a;
+  --bg-medium: #1e293b;
+  --bg-light: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #475569;
+  --success-color: #10b981;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 350px;
+  background: var(--bg-medium);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--bg-light);
+  color: var(--text-primary);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn-small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Add Form */
+.add-form {
+  padding: 1.5rem;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.add-form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.add-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-form input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  background: var(--bg-medium);
+  color: var(--text-primary);
+}
+
+.add-form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Proxy List */
+.proxy-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.proxy-list h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.proxy-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proxy-item:hover {
+  border-color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+.proxy-item.active {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.proxy-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.proxy-item.disabled:hover {
+  transform: none;
+}
+
+.proxy-info {
+  flex: 1;
+}
+
+.proxy-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.disabled-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--danger-color);
+  border-radius: 0.25rem;
+}
+
+.proxy-url {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.proxy-description {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.proxy-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.proxy-actions button {
+  flex-shrink: 0;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.iframe-header {
+  padding: 1.5rem;
+  background: var(--bg-medium);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.iframe-header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.proxy-target {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.proxy-iframe {
+  flex: 1;
+  border: none;
+  background: white;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.welcome-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.welcome-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-content > p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  padding: 2rem;
+  background: var(--bg-medium);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Messages */
+.error-message {
+  padding: 1rem;
+  margin: 1rem;
+  background: var(--danger-color);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.no-proxies {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Scrollbar */
+.proxy-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.proxy-list::-webkit-scrollbar-track {
+  background: var(--bg-medium);
+}
+
+.proxy-list::-webkit-scrollbar-thumb {
+  background: var(--bg-light);
+  border-radius: 4px;
+}
+
+.proxy-list::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 50vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
