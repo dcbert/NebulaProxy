@@ -39,7 +39,7 @@ export const Dashboard = () => {
               <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-white">Reverse Proxy</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-white">Nebula Proxy</h1>
               <p className="text-purple-100 text-xs sm:text-sm">Network Dashboard</p>
             </div>
           </div>
@@ -136,7 +136,7 @@ export const Dashboard = () => {
               <Menu className="h-5 w-5" />
             </Button>
             <div className="flex-1">
-              <h2 className="text-base font-semibold">Reverse Proxy</h2>
+              <h2 className="text-base font-semibold">Nebula Proxy</h2>
             </div>
           </div>
         )}

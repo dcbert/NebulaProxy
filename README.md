@@ -1,4 +1,4 @@
-# Reverse Proxy Manager
+# Nebula Proxy
 
 A modern web-based reverse proxy application built with FastAPI (Python) and React that allows you to access local network web applications through a unified dashboard with iframe embedding. Perfect for use with Tailscale to securely access your home lab applications remotely.
 

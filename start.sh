@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Startup script for the Reverse Proxy Manager
+# Startup script for the Nebula Proxy
 
-echo "🚀 Starting Reverse Proxy Manager..."
+echo "🚀 Starting Nebula Proxy..."
 
 # Check if config file exists, if not copy example
 if [ ! -f /app/config/proxies.json ]; then

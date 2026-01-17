@@ -1,5 +1,5 @@
 """
-Reverse Proxy Web Application
+Nebula Proxy Web Application
 Main application entry point with clean, modular architecture
 """
 from pathlib import Path
@@ -13,7 +13,7 @@ from backend.routes import proxy_handler_router, proxy_routes_router, static_rou
 
 # Initialize FastAPI application
 app = FastAPI(
-    title="Reverse Proxy Manager",
+    title="Nebula Proxy",
     description="Reverse proxy with iframe support for local network applications",
     version="1.0.0"
 )
